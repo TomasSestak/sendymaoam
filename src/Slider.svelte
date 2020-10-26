@@ -9,7 +9,7 @@
 
 	$: {
 		data.OtherImages.forEach((element, index) => {
-			local.push({id: index, src: 'http://localhost:1337' + element.url})
+			local.push({id: index, src: process.env.API_URL + element.url})
 		})
 	}
 

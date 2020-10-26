@@ -9,13 +9,9 @@
 	let albums = [];
 	let error = null;
 
-	const URL = process.env.isProd;
-
-	console.log(URL);
-
 	onMount(async () => {
 		try {
-			const res = await axios.get('http://localhost:1337/albums');
+			const res = await axios.get(`${process.env.API_URL}/albums`);
 			albums = res.data
 		} catch (e) {
 			error = e
