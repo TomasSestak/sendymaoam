@@ -9,9 +9,12 @@
 	let albums = [];
 	let error = null;
 
+
+	const isProd = process.env.isProd;
+
 	onMount(async () => {
 		try {
-			const res = await axios.get(`${process.env.API_URL}/albums`);
+			const res = await axios.get(`${isProd ? '' : 'http://localhost:1337'}/albums`);
 			albums = res.data
 		} catch (e) {
 			error = e

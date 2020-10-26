@@ -7,9 +7,11 @@
 
 	let local = [];
 
+	const isProd = process.env.isProd;
+
 	$: {
 		data.OtherImages.forEach((element, index) => {
-			local.push({id: index, src: process.env.API_URL + element.url})
+			local.push({id: index, src: (isProd ? '' : 'http://localhost:1337') + element.url})
 		})
 	}
 
