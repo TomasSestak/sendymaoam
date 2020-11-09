@@ -1,0 +1,8 @@
+{
+  "provider": "cloudinary",
+  "providerOptions": {
+    "cloud_name": "sendymaoam",
+    "api_key": "336665876362298",
+    "api_secret": "yejEaa27x3qB8L0O5GlNFRDwyr4"
+  }
+}
