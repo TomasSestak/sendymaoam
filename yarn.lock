@@ -6251,10 +6251,37 @@ mongodb@3.6.2:
   optionalDependencies:
     saslprep "^1.0.0"
 
+mongoose-float@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/mongoose-float/-/mongoose-float-1.0.4.tgz#abdda2c66320a8acf8a13a8b704c9b7ea4b5b840"
+  integrity sha512-0IMn9yADWithih3QEiwiqx+gYAEx5ZIQgKrIaLTX76jfJIq5WRzifGT/KDGqGm5q9NI5WLsgt7oblM3hNv/llw==
+
 mongoose-legacy-pluralize@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/mongoose-legacy-pluralize/-/mongoose-legacy-pluralize-1.0.2.tgz#3ba9f91fa507b5186d399fb40854bff18fb563e4"
   integrity sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
+
+mongoose-long@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/mongoose-long/-/mongoose-long-0.3.2.tgz#9e38773fc93c9c5ecfea200635878593ea577fb0"
+  integrity sha512-5gTjPH6HUmtNhamv8MPwExWo01Z4d9CT5njZlupqqbmxzMXTbDOgCuP/jnK+9SV0Fs7nuyYlXv7pJ/nA2pAAuA==
+
+mongoose@5.10.8:
+  version "5.10.8"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.10.8.tgz#e305dd5972c4d6b78418bd388342592ca5d8d633"
+  integrity sha512-hbpFhOU6rWkWPkekUeSJxqWwzsjVQZ9xPg4WmWA1HJ8YDvjyNye1xbp82fw67BpnyvcjHxyU3/YhujsOCx55yw==
+  dependencies:
+    bson "^1.1.4"
+    kareem "2.3.1"
+    mongodb "3.6.2"
+    mongoose-legacy-pluralize "1.0.2"
+    mpath "0.7.0"
+    mquery "3.2.2"
+    ms "2.1.2"
+    regexp-clone "1.0.0"
+    safe-buffer "5.2.1"
+    sift "7.0.1"
+    sliced "1.0.1"
 
 mongoose@^5.5.13:
   version "5.10.10"
@@ -9033,6 +9060,19 @@ strapi-connector-bookshelf@3.2.5:
     rimraf "3.0.2"
     strapi-utils "3.2.5"
 
+strapi-connector-mongoose@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/strapi-connector-mongoose/-/strapi-connector-mongoose-3.3.1.tgz#b10764f009d972515d8da4839eb0316f7f6aafe4"
+  integrity sha512-2BnZD3M3/qqaCF3JabCPkJnwOvHJgwm8zLtNIhpipU95tWYuYOE27hTOyB9EuUFED8EEUBb0BY0zuh0HkIUL7g==
+  dependencies:
+    lodash "4.17.19"
+    mongoose "5.10.8"
+    mongoose-float "^1.0.4"
+    mongoose-long "^0.3.2"
+    pluralize "^8.0.0"
+    semver "^7.3.2"
+    strapi-utils "3.3.1"
+
 strapi-database@3.2.5:
   version "3.2.5"
   resolved "https://registry.yarnpkg.com/strapi-database/-/strapi-database-3.2.5.tgz#37f1a4a50de3dfb8003ebee539e459b3568eab09"
@@ -9320,6 +9360,18 @@ strapi-utils@3.2.5:
   version "3.2.5"
   resolved "https://registry.yarnpkg.com/strapi-utils/-/strapi-utils-3.2.5.tgz#9e757ca9009c2211eec491514b2f0f3c7865f035"
   integrity sha512-d9CuD/DLV9ppmjtxpXtuZCl9MMnz8jIJxw7DS8t6By0DRl31CrM7lsNUo4iXj0YSFLa0NCotVYUozcY+vtDwnw==
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+    date-fns "^2.8.1"
+    lodash "4.17.19"
+    pino "^4.7.1"
+    pluralize "^8.0.0"
+    yup "0.29.3"
+
+strapi-utils@3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/strapi-utils/-/strapi-utils-3.3.1.tgz#477206ad3a1c9508beb8a3577a8fe2a192c90170"
+  integrity sha512-M1ap75VcPr451F2ybNGtProH3E0af5Cxq78pUfg0iGLKYxYGwyypt+wVA+u1gfOXFMqiNOlHGlnn4i9s3rC2KQ==
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
     date-fns "^2.8.1"
