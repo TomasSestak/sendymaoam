@@ -4,7 +4,7 @@ import Portal from '@/components/core/Portal';
 
 interface Props {
 	children: ReactNode;
-	hide: () => void;
+	hide?: () => void;
 }
 
 const Overlay: FunctionComponent<Props> = ({children, hide}) => {
