@@ -6,7 +6,7 @@
 	animation: fadeIn 9999s .4s;
 
 	.swiper-container {
-		max-height: 90vh;
+		max-height: 80vh;
 		width: 90vw;
 		max-width: 1300px;
 		@include padding(null 30px);
@@ -44,6 +44,7 @@
 	@include mq(tablet) {
 		.swiper-container {
 			@include padding(null 50px);
+			max-height: 90vh;
 		}
 		.swiper-pagination-bullet {
 			&s {
