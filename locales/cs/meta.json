@@ -1,0 +1,30 @@
+{
+	"/": {
+		"title": "Flexihub",
+		"description": "Flexihub"
+	},
+	"/employers": {
+		"title": "Flexihub - Firmy",
+		"description": "Firmy ve flexihubu"
+	},
+	"/employees": {
+		"title": "Flexihub - Zaměstnanci",
+		"description": "Zaměstnanci ve vaší firmě"
+	},
+	"/create-password/[slug]": {
+		"title": "Flexihub - Vytvoření hesla",
+		"description": "Vytvoření hesla pro hub portál"
+	},
+	"/import-of-employees": {
+		"title": "Flexihub - Import zaměstnanců",
+		"description": "Import zaměstnanců do hub portálu"
+	},
+	"/export-of-backups": {
+		"title": "Flexihub - Export záloh",
+		"description": "Export záloh váší firmy"
+	},
+	"/admins": {
+		"title": "Flexihub - Správa administrátorů",
+		"description": "Správa administrátorů hub portálu"
+	}
+}

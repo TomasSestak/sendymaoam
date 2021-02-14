@@ -1,0 +1,40 @@
+.input {
+	$this: &;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+
+	&__label {
+		@include absolute($left: 0, $top: 4px);
+		transform-origin: left;
+		pointer-events: none;
+		backface-visibility: hidden;
+		text-transform: uppercase;
+	}
+
+	&__item {
+		border-bottom: 1px solid $cSecondaryStroke;
+		@include padding(7px null);
+		@include transition(border-color);
+		&:focus {
+			border-color: $cPrimaryDarkBlue;
+		}
+		&:-webkit-autofill {
+			+ #{$this}__label {
+				transform: translateZ(0) perspective(1px) translateY(-16px) scale(.8) !important;
+			}
+		}
+	}
+
+	&__error {
+		transform-origin: left;
+		margin-top: 4px;
+	}
+
+	&--error {
+		#{$this}__item {
+			border-color: $cError;
+		}
+	}
+}

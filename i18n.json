@@ -1,0 +1,9 @@
+{
+	"locales": ["cs"],
+	"defaultLocale": "cs",
+	"pages": {
+		"*": ["common", "meta"],
+		"/": ["index"],
+		"/about": ["about"]
+	}
+}

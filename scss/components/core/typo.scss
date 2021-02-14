@@ -1,0 +1,79 @@
+.typo {
+	font-family: 'Work Sans', sans-serif;
+	line-height: 1.17;
+	letter-spacing: -.02em;
+
+	/// Headline variants
+	&--h1 {
+		font-size: 24px;
+		line-height: 1.17;
+		font-weight: $fwSemiBold;
+		letter-spacing: -.02em;
+	}
+
+	&--h2 {
+		font-size: 19px;
+		line-height: 1.17;
+		font-weight: $fwSemiBold;
+		letter-spacing: -.02em;
+	}
+
+	&--h3 {
+		font-size: 15px;
+		line-height: 1.17;
+		font-weight: $fwMedium;
+		letter-spacing: -.02em;
+	}
+
+	/// Body variants
+
+	&--xl {
+		font-size: 12px;
+	}
+
+	&--lg {
+		font-size: 14px;
+	}
+
+	&--md {
+		font-size: 13px;
+	}
+
+	&--sm {
+		font-size: 10px;
+	}
+
+	&--xs {
+		font-size: 10px;
+	}
+
+	/// Color variants
+
+	&--primary-dark-blue {
+		color: $cPrimaryDarkBlue;
+	}
+
+	&--primary-blue-grey {
+		color: $cPrimaryBlueGrey;
+	}
+
+	&--error {
+		color: $cError;
+	}
+
+	&--white {
+		color: $cWhite;
+	}
+
+	&--bold {
+		font-weight: $fwBold;
+	}
+
+	&--semi-bold {
+		font-weight: $fwSemiBold;
+	}
+
+	&--medium {
+		font-weight: $fwMedium;
+	}
+}

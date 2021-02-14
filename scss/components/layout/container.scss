@@ -1,0 +1,25 @@
+/// Use this section to create global container settings
+/// Use the space variables to offset absolute positioned elements from container etc.
+
+$container-width: 1160px;
+$space-xxs: 15px;
+$space-xs: 20px;
+$space-sm: 30px;
+$space-md: 50px;
+$space-lg: 55px;
+$space-xl: 100px;
+$space-xxl: 180px;
+
+.container {
+	max-width: $container-width;
+	@include margin(null auto);
+	@include padding(null #{$space-xxs});
+
+	@include mq(tablet) {
+		@include padding(null #{$space-xs});
+	}
+
+	@include mq(tablet-wide) {
+		@include padding(null #{$space-sm});
+	}
+}

@@ -1,0 +1,14 @@
+.icon {
+
+	> div {
+		display: inline-flex;
+	}
+
+	&--yolk {
+		width: 20px;
+	}
+
+	&--pointer {
+		cursor: pointer;
+	}
+}

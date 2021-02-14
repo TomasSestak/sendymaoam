@@ -1,0 +1,54 @@
+/// import mixins
+
+@import 'mixins/contains-falsy';
+@import 'mixins/compact-shorthand';
+@import 'mixins/directional-property';
+
+@import 'mixins/hover';
+@import 'mixins/interpolate-size';
+@import 'mixins/margin';
+@import 'mixins/padding';
+@import 'mixins/position';
+@import 'mixins/shapes';
+@import 'mixins/mq';
+@import 'mixins/transition';
+@import 'mixins/font-face';
+
+/// import config - setup for you app
+
+@import 'config/reset';
+@import 'config/colors';
+@import 'config/font-weights';
+@import 'config/breakpoints';
+@import 'config/zindex';
+@import 'config/fonts';
+@import 'config/animations';
+@import 'config/extensions';
+
+/// import core components - if you add overall improvement, add it to BASE TEMPLATE // possible as node module with possibility to update them throught project
+
+@import 'components/core/typo';
+@import 'components/core/button';
+@import 'components/core/icon';
+@import 'components/core/input';
+@import 'components/core/confirm-dialog';
+
+/// import pages
+
+@import 'pages/index';
+
+/// import layout components
+
+@import 'components/layout/container';
+@import 'components/layout/page';
+@import 'components/layout/header';
+@import 'components/layout/footer';
+
+/// import part components
+
+@import 'components/parts/form';
+
+
+// import modal components
+
+@import 'components/modal/overlay';

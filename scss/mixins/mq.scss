@@ -1,0 +1,17 @@
+/// Media query according to breakpoints declared in settings/breakpoints
+/// @param {Length} $width - mq-breakpoint size
+/// @param {String} $type - min or max width to work from on media query
+
+@mixin mq($width, $type: min) {
+	@if map_has_key($mq-breakpoints, $width) {
+		$width: map_get($mq-breakpoints, $width);
+
+		@if $type==max {
+			$width: $width - 1px;
+		}
+
+		@media only screen and (#{$type}-width: $width) {
+			@content;
+		}
+	}
+}

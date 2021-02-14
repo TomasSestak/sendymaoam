@@ -1,0 +1,17 @@
+.page {
+	display: flex;
+
+	&__wrap {
+		width: 100%;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+
+	// when screen is bigger than content - footer will stay at the bottom of viewport
+
+	&__content {
+		flex: 1 1 auto;
+	}
+}

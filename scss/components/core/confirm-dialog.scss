@@ -1,0 +1,31 @@
+.confirm-dialog {
+	@extend %white-box;
+
+	&__header {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__message {
+		text-align: center;
+		padding-top: 20px;
+	}
+
+	&__secondary-message {
+		text-align: center;
+		margin-top: 40px;
+		@include margin(40px auto null);
+		max-width: 300px;
+
+		em {
+			font-style: italic;
+			white-space: nowrap;
+		}
+	}
+
+	&__cta {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 60px;
+	}
+}

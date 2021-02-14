@@ -1,0 +1,62 @@
+/// Shorthand mixin for offset positioning
+/// @param {String} $position - Either `relative`, `absolute` or `fixed`
+/// @param {Length} $top [null] - Top offset
+/// @param {Length} $right [null] - Right offset
+/// @param {Length} $bottom [null] - Bottom offset
+/// @param {Length} $left [null] - Left offset
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+/// Shorthand mixin for absolute positioning
+/// Serves as an alias for `position(absolute, ...)`
+/// @param {Arglist} $args - Offsets
+/// @require {mixin} position
+
+@mixin absolute($args...) {
+	@include position(absolute, $args...);
+}
+
+/// Shorthand mixin for relative positioning
+/// Serves as an alias for `position(relative, ...)`
+/// @param {Arglist} $args - Offsets
+/// @require {mixin} position
+
+@mixin relative($args...) {
+	@include position(relative, $args...);
+}
+
+/// Shorthand mixin for fixed positioning
+/// Serves as an alias for `position(fixed, ...)`
+/// @param {Arglist} $args - Offsets
+/// @require {mixin} position
+
+@mixin fixed($args...) {
+	@include position(fixed, $args...);
+}
+
+/// Shorthand mixin for both vertical and horizontal center
+/// @require {mixin} absolute
+@mixin center() {
+	@include absolute($top: 50%, $left: 50%);
+	transform: translate3d(-50%, -50%, 0);
+}
+
+/// Shorthand mixin for both vertical center
+/// @require {mixin} absolute
+@mixin vertical-center() {
+	@include absolute($top: 50%);
+	transform: translateY(-50%);
+}
+
+/// Shorthand mixin for both horizontal center
+/// @require {mixin} absolute
+@mixin horizontal-center() {
+	@include absolute($left: 50%);
+	transform: translateX(-50%);
+}

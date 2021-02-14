@@ -1,0 +1,65 @@
+{
+	"name": "flexihub",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint:scss": "stylelint 'scss/**/*.scss' --syntax scss",
+		"lint:scss:fix": "stylelint 'scss/**/*.scss' --syntax scss --fix",
+		"lint:js": "eslint . --ext .js,.jsx,.ts,.tsx",
+		"lint:js:fix": "npm run lint:js -- --fix"
+	},
+	"dependencies": {
+		"@moxy/next-layout": "^2.2.2",
+		"@reduxjs/toolkit": "^1.5.0",
+		"axios": "^0.21.1",
+		"blueimp-md5": "^2.18.0",
+		"body-scroll-lock": "^3.1.5",
+		"focus-trap-react": "^8.4.1",
+		"next": "10.0.4-canary.8",
+		"next-translate": "^1.0.1",
+		"react": "17.0.1",
+		"react-dom": "17.0.1",
+		"react-hook-form": "^6.13.1",
+		"react-redux": "^7.2.2",
+		"react-spring": "^8.0.27",
+		"react-svg": "^11.2.0",
+		"sass": "^1.30.0",
+		"swr": "^0.4.2"
+	},
+	"devDependencies": {
+		"@types/blueimp-md5": "^2.7.0",
+		"@types/node": "^14.14.14",
+		"@types/react": "^17.0.0",
+		"@types/react-redux": "^7.1.11",
+		"@typescript-eslint/eslint-plugin": "^4.10.0",
+		"@typescript-eslint/parser": "^4.10.0",
+		"babel-eslint": "^10.1.0",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.10.1",
+		"eslint-plugin-prettier": "^3.1.2",
+		"husky": "^4.2.3",
+		"lint-staged": "^10.1.3",
+		"prettier": "^2.0.4",
+		"pretty-quick": "^2.0.1",
+		"stylelint": "^13.3.1",
+		"stylelint-config-prettier": "^8.0.1",
+		"stylelint-prettier": "^1.1.2",
+		"typescript": "^4.1.3"
+	},
+	"lint-staged": {
+		"./**/*.{js,jsx,ts,tsx}": [
+			"eslint . --fix"
+		],
+		"scss/**/*.scss": [
+			"stylelint --syntax scss --fix"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	}
+}

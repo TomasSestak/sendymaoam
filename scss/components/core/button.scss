@@ -1,0 +1,83 @@
+.button {
+	$this: &;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border: 1px solid transparent;
+
+	&__label {
+		white-space: nowrap;
+	}
+
+	&__icon {
+		display: flex;
+	}
+
+	&--disabled {
+		opacity: 0.3;
+		pointer-events: none;
+	}
+
+	&--full {
+		width: 100%;
+	}
+
+	&--min {
+		min-width: 220px;
+	}
+
+	&--primary {
+		@include padding(12px 20px);
+		background-color: $cPrimaryDarkBlue;
+		border-radius: 20px;
+		@include transition(box-shadow);
+		#{$this}__label {
+			font-size: 12px;
+			color: $cWhite;
+		}
+		@include hover() {
+			box-shadow: 0px 41px 179px rgba(16, 31, 105, 0.13), 0px 17.1288px 74.7819px rgba(16, 31, 105, 0.0934511),
+				0px 9.15789px 39.982px rgba(16, 31, 105, 0.0774939), 0px 5.13384px 22.4136px rgba(16, 31, 105, 0.065),
+				0px 2.72654px 11.9037px rgba(16, 31, 105, 0.0525061),
+				0px 1.13458px 4.95339px rgba(16, 31, 105, 0.0365489);
+		}
+	}
+
+	&--secondary {
+		@include padding(8px 14px 9px);
+		background-color: $cPrimaryDarkBlue;
+		border-radius: 20px;
+		#{$this}__label {
+			color: $cWhite;
+		}
+		#{$this}__icon {
+			margin-left: 8px;
+		}
+	}
+
+	&--terciary {
+		@include padding(8px 14px 9px);
+		background-color: $cSecondaryLightGrey;
+		border-radius: 20px;
+		#{$this}__label {
+			color: $cPrimaryBlueGrey;
+		}
+		#{$this}__icon {
+			margin-right: 8px;
+
+			path {
+				fill: $cPrimaryBlueGrey;
+			}
+		}
+	}
+
+	&--error {
+		@include padding(8px 14px 9px);
+		background-color: $cSecondaryRed;
+		border-radius: 20px;
+		#{$this}__label {
+			color: $cPrimaryRed;
+		}
+	}
+}

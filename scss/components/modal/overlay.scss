@@ -1,0 +1,10 @@
+.overlay {
+	@include fixed(0, 0, 0, 0);
+	background-color: rgba($cPrimaryDarkBlue, .1);
+	display: flex;
+	z-index: map-get($zindex, modal);
+	overflow-y: auto;
+	&__inner {
+		margin: auto;
+	}
+}
