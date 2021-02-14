@@ -1,21 +1,32 @@
-import {FunctionComponent, ReactNode} from 'react';
+import {FunctionComponent, ReactNode, useEffect} from 'react';
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
-import FocusTrap from 'focus-trap-react';
 import Portal from '@/components/core/Portal';
 
 interface Props {
-	children: ReactNode
+	children: ReactNode;
+	hide: () => void;
 }
 
-const Overlay: FunctionComponent<Props> = ({children}) => {
+const Overlay: FunctionComponent<Props> = ({children, hide}) => {
+
+	useEffect(() => {
+		const handleClick = ({target}) => (target as HTMLElement).classList.contains('overlay') && hide();
+		const handleEscape = ({keyCode}) => keyCode === 27 && hide();
+
+		document.addEventListener('click', handleClick);
+		document.addEventListener('keydown', handleEscape);
+
+		return () => {
+			document.removeEventListener('click', handleClick)
+			document.removeEventListener('keydown', handleEscape)
+		}
+	}, [])
 
 	return (
 		<Portal id={'__next'}>
 			<div className="overlay">
 				<div className="overlay__inner">
-					<FocusTrap>
-						{children}
-					</FocusTrap>
+					{children}
 				</div>
 			</div>
 		</Portal>

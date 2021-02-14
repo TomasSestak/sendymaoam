@@ -2,9 +2,8 @@ import Footer from '@/components/layout/Footer';
 import Head from '@/components/core/Head';
 import NextHead from 'next/head';
 import {FunctionComponent, ReactComponentElement, ReactNode} from 'react';
-import {useDispatch} from 'react-redux';
-import {AppDispatch} from '@/pages/_app';
 import {NextRouter, useRouter} from 'next/router';
+import Socials from '@/components/parts/Socials';
 
 interface Props {
 	readonly children: ReactNode;
@@ -12,7 +11,6 @@ interface Props {
 
 
 const Layout: FunctionComponent<Props> = ({ children }): ReactComponentElement<'div'> => {
-	const dispatch: AppDispatch = useDispatch();
 	const router: NextRouter = useRouter();
 
 
@@ -28,6 +26,7 @@ const Layout: FunctionComponent<Props> = ({ children }): ReactComponentElement<'
 			<Head />
 				<div className="page__wrap">
 					<div className="page__content">{children}</div>
+					<Socials/>
 					<Footer />
 				</div>
 		</div>

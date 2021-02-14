@@ -1,0 +1,26 @@
+.masonry-card {
+	$this: &;
+	display: flex;
+	cursor: pointer;
+	@include transition(transform);
+	@media (hover: hover)
+	{
+		#{$this}__footer {
+			opacity: 0
+		}
+	}
+	@include hover() {
+		transform: scale(1.03);
+		#{$this}__footer {
+			opacity: 1
+		}
+	}
+	&__footer {
+		@include padding(40px 30px);
+		opacity: 1;
+		@include transition(opacity);
+		position: absolute;
+		@include absolute($bottom: 0, $right: 0, $left: 0);
+		background-color: rgba($cBlack, .7);
+	}
+}
