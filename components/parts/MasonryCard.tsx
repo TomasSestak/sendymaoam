@@ -25,7 +25,7 @@ const MasonryCard: ComponentType<RenderComponentProps<Album>> = ({
 			<div className="masonry-card" onClick={() => setModal(true)} tabIndex={index}>
 				<img src={mainPhoto.url} className="masonry-card__image" />
 				<div className="masonry-card__footer">
-					<Typo variant={'xl'} color={'white'}>
+					<Typo variant={'h1'} color={'white'}>
 						{description}
 					</Typo>
 				</div>

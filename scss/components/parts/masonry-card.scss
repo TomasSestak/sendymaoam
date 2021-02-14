@@ -2,7 +2,10 @@
 	$this: &;
 	display: flex;
 	cursor: pointer;
-	@include transition(transform);
+	overflow: hidden;
+	img {
+		@include transition(transform);
+	}
 	@media (hover: hover)
 	{
 		#{$this}__footer {
@@ -10,7 +13,9 @@
 		}
 	}
 	@include hover() {
-		transform: scale(1.03);
+		img {
+			transform: scale(1.03);
+		}
 		#{$this}__footer {
 			opacity: 1
 		}
@@ -20,7 +25,11 @@
 		opacity: 1;
 		@include transition(opacity);
 		position: absolute;
-		@include absolute($bottom: 0, $right: 0, $left: 0);
-		background-color: rgba($cBlack, .7);
+		@include absolute(0, 0, 0, 0);
+		background-color: rgba($cPrimaryDarkBlue, .4);
+		display: flex;
+		.typo {
+			margin: auto;
+		}
 	}
 }
