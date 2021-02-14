@@ -5,7 +5,6 @@ import Button from '@/components/core/Button';
 import Icon from '@/components/core/Icon';
 import Overlay from '@/components/modal/Overlay';
 
-
 interface Props {
 	readonly hide: () => void;
 	readonly onConfirm: (value?: number) => void;

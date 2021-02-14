@@ -1,8 +1,8 @@
 import NextHead from 'next/head';
-import {NextRouter, useRouter} from 'next/router';
+import { NextRouter, useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
-import {Translate} from 'next-translate';
-import {FunctionComponent, ReactComponentElement} from 'react';
+import { Translate } from 'next-translate';
+import { FunctionComponent, ReactComponentElement } from 'react';
 
 const Head: FunctionComponent = (): ReactComponentElement<typeof NextHead> => {
 	const router: NextRouter = useRouter();

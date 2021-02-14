@@ -1,4 +1,4 @@
-import {CSSProperties, FunctionComponent, ReactComponentElement, ReactNode} from 'react';
+import { CSSProperties, FunctionComponent, ReactComponentElement, ReactNode } from 'react';
 
 type HeadlineTags = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 type TypoVariant = HeadlineTags | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
@@ -11,28 +11,31 @@ declare type Props = {
 	readonly className?: string;
 	readonly style?: CSSProperties;
 	readonly htmlFor?: string; //TODO: ONLY WHEN TAG IS LABEL
-	readonly onClick?: () => void
+	readonly onClick?: () => void;
 	readonly weight?: 'bold' | 'semi-bold' | 'medium';
-} & ({
-	readonly html: string;
-	readonly children?: never;
-} | {
-	readonly html?: never;
-	readonly children: ReactNode;
-});
+} & (
+	| {
+			readonly html: string;
+			readonly children?: never;
+	  }
+	| {
+			readonly html?: never;
+			readonly children: ReactNode;
+	  }
+);
 
 const Typo: FunctionComponent<Props> = ({
-											variant,
-											Tag,
-											color,
-											className,
-											htmlFor,
-											html,
-											children,
-											style,
-											onClick,
-											weight
-										}): ReactComponentElement<TypoTag> => {
+	variant,
+	Tag,
+	color,
+	className,
+	htmlFor,
+	html,
+	children,
+	style,
+	onClick,
+	weight,
+}): ReactComponentElement<TypoTag> => {
 	if (!Tag) {
 		switch (variant) {
 			case 'h1':
@@ -48,7 +51,9 @@ const Typo: FunctionComponent<Props> = ({
 		}
 	}
 
-	const classes: string = `${className ? className : ''} typo typo--${variant} ${color ? `typo--${color}` : ''} ${weight ? `typo--${weight}` : ''}`;
+	const classes = `${className ? className : ''} typo typo--${variant} ${color ? `typo--${color}` : ''} ${
+		weight ? `typo--${weight}` : ''
+	}`;
 
 	return (
 		<>
@@ -57,17 +62,12 @@ const Typo: FunctionComponent<Props> = ({
 					htmlFor={htmlFor}
 					style={style}
 					className={classes}
-					dangerouslySetInnerHTML={{__html: html}}
+					dangerouslySetInnerHTML={{ __html: html }}
 					onClick={onClick}
 				/>
 			)}
 			{children && (
-				<Tag
-					htmlFor={htmlFor}
-					style={style}
-					className={classes}
-					onClick={onClick}
-				>
+				<Tag htmlFor={htmlFor} style={style} className={classes} onClick={onClick}>
 					{children}
 				</Tag>
 			)}

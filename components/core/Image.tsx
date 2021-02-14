@@ -1,5 +1,5 @@
 import NextImage from 'next/image';
-import {FunctionComponent, ReactComponentElement} from 'react';
+import { FunctionComponent, ReactComponentElement } from 'react';
 
 type LayoutValue = 'fill' | 'fixed' | 'intrinsic' | 'responsive';
 type ImgElementStyle = NonNullable<JSX.IntrinsicElements['img']['style']>;
@@ -10,29 +10,32 @@ type Props = {
 	readonly objectFit?: ImgElementStyle['objectFit'];
 	readonly objectPosition?: ImgElementStyle['objectPosition'];
 	readonly instantLoad?: boolean;
-} & ({
-	readonly width?: never;
-	readonly height?: never;
-	readonly layout: 'fill';
-} | {
-	readonly width: number | string;
-	readonly height: number | string;
-	readonly layout?: Exclude<LayoutValue, 'fill'>;
-});
+} & (
+	| {
+			readonly width?: never;
+			readonly height?: never;
+			readonly layout: 'fill';
+	  }
+	| {
+			readonly width: number | string;
+			readonly height: number | string;
+			readonly layout?: Exclude<LayoutValue, 'fill'>;
+	  }
+);
 
 /*TODO: THIS COMPONENT IS NOT READY TO USE - WAITING FOR NEW LAYOUT MODES OF layout prop*/
 
 const Image: FunctionComponent<Props> = ({
-											 src,
-											 quality,
-											 className,
-											 objectFit,
-											 objectPosition,
-											 instantLoad,
-											 layout,
-											 width,
-											 height,
-										 }): ReactComponentElement<typeof NextImage> => {
+	src,
+	quality,
+	className,
+	objectFit,
+	objectPosition,
+	instantLoad,
+	layout,
+	width,
+	height,
+}): ReactComponentElement<typeof NextImage> => {
 	return (
 		<NextImage
 			src={src}
