@@ -2,40 +2,76 @@
 	//min-width: 90vw;
 	opacity: 0;
 	background-color: $cWhite;
-	animation: fadeIn 9999s .3s;
 	border-radius: 10px;
+	animation: fadeIn 9999s .4s;
+
 	.swiper-container {
 		max-height: 90vh;
 		width: 90vw;
-		max-width: 800px;
+		max-width: 1300px;
+		@include padding(null 30px);
 	}
+
 	.swiper-pagination-bullet {
 		@include rectangle(14px);
 		margin-top: 14px !important;
 		margin-bottom: 14px !important;
 		@include transition(background-color, opacity);
+
 		&s {
-			right: 50px !important;
+			right: 9px !important;
 		}
+
 		&-active {
 			background-color: $cPrimaryDarkBlue !important;
 		}
 	}
+
 	&__slide {
 		display: flex;
 	}
+
 	img {
 		max-height: 800px;
 	}
+
 	&__image {
 		max-height: 90% !important;
 		@include margin(auto);
 		display: block;
 	}
-}
 
-@keyframes fadeIn {
-	0% {opacity: 0}
-	.02% {opacity: 1}
-	100% {opacity: 1}
+	@include mq(tablet) {
+		.swiper-container {
+			@include padding(null 50px);
+		}
+		.swiper-pagination-bullet {
+			&s {
+				right: 25px !important;
+			}
+		}
+	}
+
+	@include mq(desktop) {
+		.swiper-container {
+			@include padding(null 85px);
+		}
+		.swiper-pagination-bullet {
+			&s {
+				right: 50px !important;
+			}
+		}
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0
+		}
+		.02% {
+			opacity: 1
+		}
+		100% {
+			opacity: 1
+		}
+	}
 }

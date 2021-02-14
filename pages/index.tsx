@@ -63,7 +63,7 @@ const Index: FunctionComponent<Props> = ({ initialData }): ReactElement<'div'> =
 
 	return (
 		<div className="index">
-			<DynamicMasonry items={albums} render={MasonryCard} columnWidth={500} />
+			<DynamicMasonry items={albums} render={MasonryCard} columnWidth={500} tabIndex={null}/>
 		</div>
 	);
 };

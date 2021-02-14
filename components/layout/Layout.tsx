@@ -16,10 +16,7 @@ const Layout: FunctionComponent<Props> = ({ children }): ReactComponentElement<'
 		<div className="page">
 			<NextHead>
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
-				<link
-					href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
-					rel="stylesheet"
-				/>
+				<link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet" />
 			</NextHead>
 			<Head />
 			<div className="page__wrap">
