@@ -12,10 +12,6 @@
 		"lint:js:fix": "npm run lint:js -- --fix"
 	},
 	"dependencies": {
-		"@moxy/next-layout": "^2.2.2",
-		"@reduxjs/toolkit": "^1.5.0",
-		"axios": "^0.21.1",
-		"blueimp-md5": "^2.18.0",
 		"body-scroll-lock": "^3.1.5",
 		"focus-trap-react": "^8.4.1",
 		"next": "10.0.4-canary.8",
