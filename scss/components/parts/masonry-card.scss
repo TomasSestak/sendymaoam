@@ -1,6 +1,7 @@
 .masonry-card {
 	$this: &;
 	display: flex;
+	align-items: center;
 	cursor: pointer;
 	overflow: hidden;
 	img {
