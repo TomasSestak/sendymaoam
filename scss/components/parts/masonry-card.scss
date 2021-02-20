@@ -5,6 +5,7 @@
 	cursor: pointer;
 	overflow: hidden;
 	width: 100%;
+	position: relative;
 	img {
 		@include transition(transform);
 	}

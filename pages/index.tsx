@@ -1,9 +1,11 @@
-import {FunctionComponent, ReactElement, useEffect} from 'react';
+import {FunctionComponent, ReactElement, useEffect, useState} from 'react';
 import {NextRouter, useRouter} from 'next/router';
 import useSWR, {keyInterface} from 'swr';
 import {request} from 'graphql-request';
 import MasonryCard from '@/components/parts/MasonryCard';
 import dynamic from 'next/dynamic';
+import Overlay from '@/components/modal/Overlay';
+import VerticalSlider from '@/components/parts/VerticalSlider';
 
 const getAlbums: keyInterface = `query getAlbums {
 	albums {
@@ -58,6 +60,8 @@ const Index: FunctionComponent<Props> = ({initialData}): ReactElement<'div'> => 
 
 	const router: NextRouter = useRouter();
 
+	const [modal, setModal] = useState<false | number>(false);
+
 	useEffect(() => {
 		const Masonry = require('masonry-layout');
 		const masonry = new Masonry('.grid');
@@ -66,10 +70,15 @@ const Index: FunctionComponent<Props> = ({initialData}): ReactElement<'div'> => 
 
 	return (
 		<div className="index">
+			{modal !== false && (
+				<Overlay hide={() => setModal(false)}>
+					<VerticalSlider photos={albums[modal].otherPhotos}/>
+				</Overlay>
+			)}
 			<div className="grid">
-				{albums.reverse().map((data, key) => {
+				{[...albums].reverse().map((data, key) => {
 					return (
-						<MasonryCard key={key} index={key} width={400} data={data}/>
+						<MasonryCard key={key} index={key} {...data} setModal={() => setModal(albums.length - 1 - key)}/>
 					)
 				})}
 			</div>
