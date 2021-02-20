@@ -63,9 +63,12 @@ const Index: FunctionComponent<Props> = ({initialData}): ReactElement<'div'> => 
 	const [modal, setModal] = useState<false | number>(false);
 
 	useEffect(() => {
+		const Masonry = require('masonry-layout');
+		const masonry = new Masonry('.grid', {
+			percentPosition: true
+		});
 		window.addEventListener('load', () => {
-			const Masonry = require('masonry-layout');
-			const masonry = new Masonry('.grid');
+			masonry.layout()
 		})
 	}, [])
 
