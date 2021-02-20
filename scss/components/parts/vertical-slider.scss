@@ -32,7 +32,7 @@
 	}
 
 	img {
-		max-height: mincalc(100vh - 200px);
+		max-height: minmax(85vh, 800px);
 	}
 
 	&__image {
@@ -68,7 +68,7 @@
 		0% {
 			opacity: 0
 		}
-		.02% {
+		.03% {
 			opacity: 1
 		}
 		100% {
