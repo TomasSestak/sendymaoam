@@ -59,8 +59,7 @@ const Index: FunctionComponent<Props> = ({initialData}): ReactElement<'div'> => 
 
 	useEffect(() => {
 		const Masonry = require('masonry-layout');
-		const grid = document.querySelector('.grid');
-		const masonry = new Masonry( grid);
+		const masonry = new Masonry('.grid');
 	}, [])
 
 
