@@ -9,7 +9,8 @@ interface Props {
 
 const Overlay: FunctionComponent<Props> = ({ children, hide }) => {
 	useEffect(() => {
-		disableBodyScroll();
+		const targetElement: HTMLDivElement = document.querySelector('.overlay');
+		disableBodyScroll(targetElement);
 		const handleClick = ({ target }) => (target as HTMLElement).classList.contains('overlay') && hide();
 		const handleEscape = ({ keyCode }) => keyCode === 27 && hide();
 
@@ -17,7 +18,7 @@ const Overlay: FunctionComponent<Props> = ({ children, hide }) => {
 		document.addEventListener('keydown', handleEscape);
 
 		return () => {
-			enableBodyScroll();
+			enableBodyScroll(targetElement);
 			document.removeEventListener('click', handleClick);
 			document.removeEventListener('keydown', handleEscape);
 		};

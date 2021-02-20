@@ -17,6 +17,7 @@
 		"graphql": "^15.5.0",
 		"graphql-request": "^3.4.0",
 		"masonic": "^3.4.0",
+		"masonry-layout": "^4.2.2",
 		"next": "10.0.4-canary.8",
 		"next-translate": "^1.0.1",
 		"react": "17.0.1",
@@ -31,6 +32,8 @@
 		"swr": "^0.4.2"
 	},
 	"devDependencies": {
+		"@types/body-scroll-lock": "^2.6.1",
+		"@types/masonry-layout": "^4.2.2",
 		"@types/node": "^14.14.14",
 		"@types/react": "^17.0.0",
 		"@typescript-eslint/eslint-plugin": "^4.10.0",
