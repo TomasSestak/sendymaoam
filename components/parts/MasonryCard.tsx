@@ -17,6 +17,7 @@ const MasonryCard: ComponentType<RenderComponentProps<Album>> = ({
 
 	return (
 		<>
+
 			{modal && (
 				<Overlay hide={() => setModal(false)}>
 					<VerticalSlider photos={otherPhotos}/>
