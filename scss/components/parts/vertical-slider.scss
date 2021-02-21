@@ -3,7 +3,7 @@
 	opacity: 0;
 	background-color: $cWhite;
 	border-radius: 10px;
-	animation: fadeIn 9999s .4s;
+	animation: fadeIn 9999s .2s;
 
 	.swiper-container {
 		max-height: 80vh;
@@ -29,16 +29,7 @@
 
 	&__slide {
 		display: flex;
-	}
-
-	img {
-		max-height: minmax(85vh, 800px);
-	}
-
-	&__image {
-		max-height: 90% !important;
-		@include margin(auto);
-		display: block;
+		align-items: center;
 	}
 
 	@include mq(tablet) {
@@ -68,7 +59,7 @@
 		0% {
 			opacity: 0
 		}
-		.03% {
+		.02% {
 			opacity: 1
 		}
 		100% {
