@@ -43,7 +43,7 @@
 	@include mq(desktop) {
 		width: calc(100%/3);
 	}
-	@include mq(dekstop-wide) {
+	@include mq(desktop-wide) {
 		width: 25%;
 	}
 }
