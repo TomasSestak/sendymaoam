@@ -1,26 +1,3 @@
 {
 	"title": "aaa",
-	"status": {
-		"ACTIVE": "aktivní",
-		"INACTIVE": "neaktivní",
-		"TERMINATED": "smazaný"
-	},
-	"employeeState": "status",
-	"identificationNumber": "číslo zaměstnance",
-	"phone": "telefon",
-	"email": "e-mail",
-	"accountNumber": "číslo účtu",
-	"name": "název",
-	"address": "adresa",
-	"ico": "IČO",
-	"dic": "DIČ",
-	"transactionType": {
-		"ADVANCE_OF_WAGES": "Výběr zálohy",
-		"WITHDRAWAL_FEE": "Poplatek za výběr",
-		"WAGE": "Část výplaty"
-	},
-	"currency": {
-		"CZK": "Kč",
-		"EUR": "Eur"
-	}
 }
