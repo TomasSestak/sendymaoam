@@ -12,8 +12,7 @@
 
 		$font-size: (
 			$phone: 24px,
-			$tablet: 44px,
-			$desktop: 64px,
+			$desktop: 36px,
 		);
 		@include interpolate-size('font-size', $font-size);
 	}

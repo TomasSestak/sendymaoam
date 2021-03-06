@@ -1,8 +1,8 @@
 import Footer from '@/components/layout/Footer';
 import Head from '@/components/core/Head';
 import NextHead from 'next/head';
-import { FunctionComponent, ReactComponentElement, ReactNode } from 'react';
-import { NextRouter, useRouter } from 'next/router';
+import {FunctionComponent, ReactComponentElement, ReactNode} from 'react';
+import {NextRouter, useRouter} from 'next/router';
 import Socials from '@/components/parts/Socials';
 
 interface Props {
